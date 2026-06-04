@@ -1,0 +1,33 @@
+# Backend
+backend/venv/
+backend/.env
+backend/__pycache__/
+backend/*.pyc
+backend/.pytest_cache/
+backend/.venv/
+
+# Frontend
+agentic-qa-generator/node_modules/
+agentic-qa-generator/.next/
+agentic-qa-generator/out/
+agentic-qa-generator/.env.local
+agentic-qa-generator/.env.*.local
+agentic-qa-generator/dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
