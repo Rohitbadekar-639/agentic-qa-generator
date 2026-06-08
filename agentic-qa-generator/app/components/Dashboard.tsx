@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { API_URL } from '@/config';
 import { Loader2, Copy, Download } from 'lucide-react';
 import CodeDisplay from './CodeDisplay';
 import axios from 'axios';
@@ -37,7 +36,7 @@ export default function Dashboard() {
 
     try {
       const response = await axios.post<GenerateTestResponse>(
-        `${API_URL}/api/generate-tests`,
+        'https://agentic-qa-backend-skj9.onrender.com/api/generate-tests',
         {
           story: story.trim(),
           framework: framework,
