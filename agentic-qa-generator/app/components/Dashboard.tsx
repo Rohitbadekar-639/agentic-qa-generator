@@ -35,8 +35,9 @@ export default function Dashboard() {
     setAnalysis(null);
 
     try {
+      const apiUrl = 'https://agentic-qa-backend-skj9.onrender.com';
       const response = await axios.post<GenerateTestResponse>(
-        'http://localhost:8000/api/generate-tests',
+        `${apiUrl}/api/generate-tests`,
         {
           story: story.trim(),
           framework: framework,
@@ -48,7 +49,7 @@ export default function Dashboard() {
     } catch (err: any) {
       setError(
         err.response?.data?.detail ||
-          'Failed to generate tests. Make sure the backend is running on http://localhost:8000'
+          'Failed to generate tests. Check that the backend is running and accessible.'
       );
     } finally {
       setLoading(false);
